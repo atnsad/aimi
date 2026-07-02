@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tutorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* دکمه خروج */
+        .exit-btn {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .exit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        .exit-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .exit-btn::before {
+            content: "←";
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .note-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 35px;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+        }
+
+        .note-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 24px;
+            padding-bottom: 18px;
+            border-bottom: 2px dashed #e0e0e0;
+            word-break: break-word;
+        }
+
+        .note-content {
+            font-size: 17px;
+            line-height: 2;
+            color: #444;
+            text-align: justify;
+            min-height: 300px;
+            word-break: break-word;
+            white-space: pre-wrap;
+        }
+
+        .note-content:empty::before {
+            content: "text";
+            color: #bbb;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .exit-btn {
+                top: 15px;
+                left: 15px;
+                padding: 10px 22px;
+                font-size: 14px;
+            }
+            
+            .note-card {
+                padding: 24px 18px;
+                border-radius: 16px;
+                margin-top: 40px;
+            }
+            .note-title {
+                font-size: 22px;
+            }
+            .note-content {
+                font-size: 15px;
+                line-height: 1.8;
+                min-height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- دکمه خروج -->
+    <button class="exit-btn" onclick="window.location.href='exit.html'">
+        خروج
+    </button>
+
+    <div class="note-card">
+        <h1 class="note-title">آموزش بازی</h1>
+        <div class="note-content">این بازی برای تقویت دقت و سرعت درست شده است. در صفحه ی اول, وقتی بازی را باز میکنید شاهد دکمه هایی هستید, شما میتوانید با کلیک روی این دکمه ها از قابلیت ها بهره ببرید . با کلیک روی دکمه ی <آموزش و توضیحات> شما میتوانید وارد همین صفحه شوید تا بتوانید آموزش بازی را مطالعه بکنید . بعد از این دکمه, 5 دکمه ی تمرین وجود دارد که در ادامه کارایی آنها را خواهید خواند . هر کدام از این دکمه ها شما را وارد بخشی میکند که شما باید در آنجا practice مد نظر خود را انتخاب نمایید, هر چه practice انتخاب شده شماره ی بالا تری داشته باشد, آن سخت تر است. بازی این طور است که اول یک تایمر سه ثانیه ای آغاز میشود و بعد پایان آن بازی شروع میشود, در حین بازی به زمان های تصادفی و مکان تصادفی یک دایره به وجود می آید که داخل آن خالی می شود, شما باید در سریع ترین زمان روی آن دایره ضربه بزنید, اگر دیر ضربه بزنید و آن دایره کاملا محو شود بازی تمام می شود و امتیاز شما نوشته میشود. این روند بازی است . در آخر از شما برای انتخاب این بازی تشکر می کنم 🙏 موفق باشید💖</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.fontcdn.ir/FontPersian/Vazirmatn/Vazirmatn-font-face.css">
+    <title>aimi-t4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto 20px;
+        }
+
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+
+        .app-name {
+            font-family: 'vazir', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 70px;
+            margin-bottom: 15px;
+            height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .icon-note::before { content: "❌"; }
+        .icon-guitar::before { content: "1️⃣"; }
+        .icon-music::before { content: "2️⃣"; }
+        .icon-wave::before { content: "3️⃣"; }
+        .icon-metronome::before { content: "4️⃣"; }
+        .icon-score::before { content: "5️⃣"; }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .app-name {
+                font-size: 28px;
+            }
+            
+            .logo {
+                width: 50px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logos/logo.png" alt="Logo" class="logo">
+        <div class="app-name">تمرین چهارم</div>
+    </div>
+
+    <div class="container">
+        <a href="exit.html" class="card">
+            <div class="card-icon icon-note"></div>
+            <div class="card-title">خروج</div>
+        </a>
+
+        <a href="1/index.html" class="card">
+            <div class="card-icon icon-guitar"></div>
+            <div class="card-title">practice 1</div>
+        </a>
+
+        <a href="2/index.html" class="card">
+            <div class="card-icon icon-music"></div>
+            <div class="card-title">practice 2</div>
+        </a>
+
+        <a href="3/index.html" class="card">
+            <div class="card-icon icon-wave"></div>
+            <div class="card-title">practice 3</div>
+        </a>
+
+        <a href="4/index.html" class="card">
+            <div class="card-icon icon-metronome"></div>
+            <div class="card-title">practice 4</div>
+        </a>
+
+        <a href="5/index.html" class="card">
+            <div class="card-icon icon-score"></div>
+            <div class="card-title">practice 5</div>
+        </a>
+    </div>
+</body>
+</html>
