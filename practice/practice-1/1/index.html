@@ -148,21 +148,24 @@
 
         const colors = ['#ff4757', '#ff6348', '#ffa502', '#fffa65', '#7bed9f', '#70a1ff', '#5f27cd', '#ee5a6f', '#ff6b81', '#fd79a8'];
 
-        function startCountdown() {
-            let count = 3;
-            countdownEl.style.display = 'block';
-            
-            const interval = setInterval(() => {
-                count--;
-                if (count > 0) {
-                    countdownEl.textContent = count;
-                } else {
-                    countdownEl.style.display = 'none';
-                    clearInterval(interval);
-                    startGame();
-                }
-            }, 1000);
-        }
+            function startCountdown() {
+                let count = 3;
+
+                countdownEl.style.display = "block";
+                countdownEl.textContent = count;
+
+                const interval = setInterval(() => {
+                    count--;
+
+                    if (count === 0) {
+                        clearInterval(interval);
+                        countdownEl.style.display = "none";
+                        startGame();
+                    } else {
+                        countdownEl.textContent = count;
+                    }
+                }, 1000);
+            }
 
         function startGame() {
             gameActive = true;
