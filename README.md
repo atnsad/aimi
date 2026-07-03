@@ -1,5 +1,12 @@
-# 🎯 [AIMI]
+<div align="center">
+
+# 🎯 AIMI
+
+![Game Logo](logo/logo.png)
+
 > ابزاری برای به چالش کشیدن سرعت واکنش و دقتِ گیمرها.
+
+</div>
 
 ---
 
