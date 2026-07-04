@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>tp-2</title>
+    <title>tp-1</title>
     <style>
         * {
             margin: 0;
@@ -148,21 +148,24 @@
 
         const colors = ['#ff4757', '#ff6348', '#ffa502', '#fffa65', '#7bed9f', '#70a1ff', '#5f27cd', '#ee5a6f', '#ff6b81', '#fd79a8'];
 
-        function startCountdown() {
-            let count = 3;
-            countdownEl.style.display = 'block';
-            
-            const interval = setInterval(() => {
-                count--;
-                if (count > 0) {
-                    countdownEl.textContent = count;
-                } else {
-                    countdownEl.style.display = 'none';
-                    clearInterval(interval);
-                    startGame();
-                }
-            }, 1000);
-        }
+            function startCountdown() {
+                let count = 3;
+
+                countdownEl.style.display = "block";
+                countdownEl.textContent = count;
+
+                const interval = setInterval(() => {
+                    count--;
+
+                    if (count === 0) {
+                        clearInterval(interval);
+                        countdownEl.style.display = "none";
+                        startGame();
+                    } else {
+                        countdownEl.textContent = count;
+                    }
+                }, 1000);
+            }
 
         function startGame() {
             gameActive = true;
@@ -176,11 +179,11 @@
         function spawnCircle() {
             if (!gameActive || gameOverFlag) return;
 
-            const size = 60 + Math.random() * 30; // کوچکتر: 60-90px به جای 80-120px
+            const size = 80 + Math.random() * 40;
             const x = Math.random() * (window.innerWidth - size);
             const y = Math.random() * (window.innerHeight - size);
             const color = colors[Math.floor(Math.random() * colors.length)];
-            const duration = 800 + Math.random() * 300; // سریع‌تر: 800-1100ms به جای 1500-2000ms
+            const duration = 1500 + Math.random() * 500;
 
             const circleOuter = document.createElement('div');
             circleOuter.className = 'circle circle-outer';
@@ -232,7 +235,7 @@
                         circleOuter.remove();
                     }, 100);
                     
-                    const nextDelay = 200 + Math.random() * 200; // فاصله کمتر: 200-400ms به جای 400-700ms
+                    const nextDelay = 400 + Math.random() * 300;
                     spawnTimeout = setTimeout(spawnCircle, nextDelay);
                 }
             });
