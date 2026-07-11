@@ -25,7 +25,7 @@
         }
         h1 { color: #bb86fc; }
         p { line-height: 1.8; margin-bottom: 30px; }
-        .buttons { display: flex; gap: 15px; justify-content: center; }
+        .buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
         a {
             text-decoration: none;
             padding: 10px 20px;
@@ -35,10 +35,15 @@
         }
         .btn-git { background-color: #333; color: white; border: 1px solid #444; }
         .btn-git:hover { background-color: #444; }
+
         .btn-support { background-color: #03dac6; color: #000; }
         .btn-support:hover { background-color: #018786; }
+
         .btn-exit { background-color: #cf6679; color: #000; }
         .btn-exit:hover { background-color: #b00020; }
+
+        .btn-google { background-color: #4285f4; color: white; }
+        .btn-google:hover { background-color: #3367d6; }
     </style>
 </head>
 <body>
@@ -51,8 +56,9 @@
         این پروژه، حاصل تلاش‌های شبانه‌روزی و علاقه‌ام به دنیای کدنویسی و بازی‌سازی است. ممنون که همراه من در این مسیر هستید.
     </p>
     <div class="buttons">
-        <a href="https://github.com/atnsad/aimi" class="btn-git">گیت‌هاب</a>
-        <a href="https://reymit.ir/atnsad" class="btn-support">حمایت</a>
+        <a href="https://github.com/atnsad/aimi" class="btn-git" target="_blank">گیت‌هاب</a>
+        <a href="https://reymit.ir/atnsad" class="btn-support" target="_blank">حمایت</a>
+        <a href="https://atnsad.github.io/projects" class="btn-google" target="_blank">پروژه ها</a>
         <a href="https://atnsad.github.io/aimi" class="btn-exit">خروج</a>
     </div>
 </div>
